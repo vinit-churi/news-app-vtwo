@@ -13,6 +13,7 @@ function App() {
   let history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(`${query} is printed nad ${history}`);
     history.push("/search");
   };
   const handleChange = (e) => {

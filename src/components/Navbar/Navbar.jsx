@@ -58,7 +58,7 @@ const Navbar = ({ handleSubmit, handleChange }) => {
               placeholder="Search Keywords..."
               onChange={(e) => handleChange(e)}
             />
-            <button onSubmit={(e) => handleSubmit(e)}>
+            <button onClick={(e) => handleSubmit(e)}>
               <FaArrowCircleRight className={Styles.submitIcon} />
             </button>
           </form>
