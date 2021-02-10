@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { VscSearch } from "react-icons/vsc";
+import { FaArrowCircleRight } from "react-icons/fa";
 import Styles from "./Navbar.module.scss";
 import Logos from "../../logos";
-const Navbar = () => {
+const Navbar = ({ handleSubmit, handleChange }) => {
   return (
     <div className={Styles.navbar}>
       <div className={Styles.header}>
@@ -55,7 +56,11 @@ const Navbar = () => {
               type="text"
               name="search_query"
               placeholder="Search Keywords..."
+              onChange={(e) => handleChange(e)}
             />
+            <button onSubmit={(e) => handleSubmit(e)}>
+              <FaArrowCircleRight className={Styles.submitIcon} />
+            </button>
           </form>
           <VscSearch className={Styles.icon} />
         </div>

@@ -74,8 +74,8 @@
       // padding: 1rem;
       position: relative;
       input {
-        height: 25px;
         width: 250px;
+        height: 25px;
         padding-left: 23px;
         border-color: #a7a480;
         border-image: none;
@@ -84,6 +84,23 @@
         &::placeholder {
           color: #a7a480;
           font-size: 0.8rem;
+        }
+      }
+
+      button {
+        background-color: white;
+        border: none;
+        // border-image: none;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        transform: translateY(-50%);
+        cursor: pointer;
+        .submitIcon {
+          font-size: 1.2rem;
+          color: #a7a480;
         }
       }
       .icon {
@@ -99,6 +116,9 @@
       }
     }
   }
+}
+*::selection {
+  background-color: #fbb034;
 }
 
 .active_nav {

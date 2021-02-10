@@ -3,12 +3,12 @@ const Requests = {
   hot: "",
   trending: "",
   editors: "",
-  categoryGeneral: "",
-  categoryScience: "",
-  categoryTechology: "",
-  categorySports: "",
-  categoryBusiness: "",
-  categoryEntertainment: "",
+  categoryGeneral: "general",
+  categoryScience: "science",
+  categoryTechology: "technology",
+  categorySports: "sports",
+  categoryBusiness: "business",
+  categoryEntertainment: "entertainment",
 };
 
 export default Requests;
