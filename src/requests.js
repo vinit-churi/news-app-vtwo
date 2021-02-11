@@ -1,4 +1,4 @@
-const apiKeyOne = "c8ecc81fda1c46748c525dddc461c065";
+// const apiKeyOne = "c8ecc81fda1c46748c525dddc461c065";
 const apiKeyTwo = "e4397fed6ebf4bae9b15c651e33df206";
 const Requests = {
   showcase: `https://newsapi.org/v2/top-headlines?country=us&pageSize=1&apiKey=${apiKeyTwo}`,
