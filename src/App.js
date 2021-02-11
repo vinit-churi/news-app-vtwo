@@ -28,7 +28,7 @@ function App() {
           <Hero query={Request.showcase} />
           <HotSection query={Request.hot} />
           <Trending query={Request.trending} />
-          <EditorsPick query={Request.editors} />
+          <EditorsPick query={Request.EditorsPick} />
         </Route>
         <Route exact path="/science">
           <CategoryQuery query={Request.categoryScience} />
