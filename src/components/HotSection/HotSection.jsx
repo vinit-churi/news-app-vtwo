@@ -8,8 +8,6 @@ const HotSection = ({ query }) => {
       const result = await fetch(query)
         .then((data) => data.json())
         .then((data) => data.articles);
-
-      console.log(result);
       setData(...result);
     };
     fetchData();
