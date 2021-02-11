@@ -1,0 +1,53 @@
+.hero {
+  padding-top: 40px;
+  display: flex;
+  width: 85%;
+  // justify-content: space-between;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  .article_card {
+    padding: 30px;
+    position: absolute;
+    width: 450px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    h3 {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    h2 {
+      font-size: 1rem;
+      width: 420px;
+    }
+    p {
+      width: 430px;
+    }
+    .readMore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.6rem 0.2rem;
+      width: 90px;
+      background-color: #fbb034;
+      background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+      border-radius: 30px;
+      a {
+        font-size: 0.9rem;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  .background_image {
+    justify-self: flex-end;
+    height: 400px;
+    width: 60%;
+    background-size: cover;
+    background-position: center;
+  }
+}

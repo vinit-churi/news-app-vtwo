@@ -10,10 +10,11 @@ import Trending from "./components/Trending/Trending";
 import EditorsPick from "./components/EditorsPick/EditorsPick";
 function App() {
   const [query, setQuery] = React.useState();
+  const [fullQuery, setFullQuery] = React.useState("economy");
   let history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`${query} is printed nad ${history}`);
+    setFullQuery(query);
     history.push("/search");
   };
   const handleChange = (e) => {
@@ -45,7 +46,7 @@ function App() {
           <CategoryQuery query={Request.categoryEntertainment} />
         </Route>
         <Route exact path="/search">
-          <CategoryQuery query={query} />
+          <CategoryQuery query={fullQuery} />
         </Route>
       </Switch>
     </div>
