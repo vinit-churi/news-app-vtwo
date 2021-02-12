@@ -14,7 +14,10 @@ function App() {
   let history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFullQuery(query);
+    let querySting = encodeURI(
+      `https://newsapi.org/v2/everything?q=${query}&apiKey=e4397fed6ebf4bae9b15c651e33df206&pageSize=15`
+    );
+    setFullQuery(querySting);
     history.push("/search");
   };
   const handleChange = (e) => {
