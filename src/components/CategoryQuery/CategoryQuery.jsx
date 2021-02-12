@@ -16,12 +16,12 @@ const CategoryQuery = ({ query }) => {
   }, [query]);
   return (
     <div className={Styles.categoryQuery}>
-      {data.map((article) => (
+      {data.map((article, index) => (
         <>
-          <div>
+          <div key={index}>
             <div
               className={Styles.background_image}
-              style={{ backgroundImage: `url(${article?.urlToImage})` }}
+              style={{ backgroundImage: `url(${article?.image})` }}
             ></div>
 
             <a rel="noopener noreferrer" target="_blank" href={article?.url}>

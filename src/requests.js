@@ -13,4 +13,17 @@ const Requests = {
   categoryEntertainment: `https://newsapi.org/v2/top-headlines?apiKey=${apiKeyTwo}&country=in&category=entertainment&pageSize=15`,
 };
 
+const keyG = "8d8ce8f49342b07f2488082a9c8d9f59";
+export const RequsetG = {
+  showcase: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=1&lang=en`,
+  hot: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=1&lang=en&topic=technology`,
+  trending: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=4&lang=en&topic=health`,
+  EditorsPick: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=4&lang=en&q=self%20help`,
+  categoryScience: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=6&lang=en&topic=science`,
+  categoryTechology: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=6&lang=en&topic=technology`,
+  categorySports: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=6&lang=en&topic=sports`,
+  categoryBusiness: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=6&lang=en&topic=business`,
+  categoryEntertainment: `https://gnews.io/api/v4/top-headlines?&token=${keyG}&max=6&lang=en&topic=entertainment`,
+};
+
 export default Requests;

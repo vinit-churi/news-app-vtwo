@@ -49,7 +49,7 @@ const EditorsPick = ({ query }) => {
           return (
             <>
               <div
-                style={{ backgroundImage: `url(${article?.urlToImage})` }}
+                style={{ backgroundImage: `url(${article?.image})` }}
                 className={Styles.background_image}
               ></div>
               <div className={Styles.showcase_info}>

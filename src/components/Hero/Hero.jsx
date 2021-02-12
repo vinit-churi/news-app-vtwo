@@ -28,7 +28,7 @@ const Hero = ({ query }) => {
       </div>
       <div
         className={Styles.background_image}
-        style={{ backgroundImage: `url(${data?.urlToImage})` }}
+        style={{ backgroundImage: `url(${data?.image})` }}
       ></div>
     </div>
   );

@@ -27,7 +27,7 @@ const Trending = ({ query }) => {
             <div className={Styles.article_card}>
               <div
                 className={Styles.background_image}
-                style={{ backgroundImage: `url(${article?.urlToImage})` }}
+                style={{ backgroundImage: `url(${article?.image})` }}
               ></div>
               <div className={Styles.article_info}>
                 <h3>{article?.publishedAt}</h3>

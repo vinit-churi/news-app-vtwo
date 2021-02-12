@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.scss";
 import { Route, Switch, useHistory } from "react-router-dom";
-import Request from "./requests";
+import Request, { RequsetG } from "./requests";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import CategoryQuery from "./components/CategoryQuery/CategoryQuery";
@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let querySting = encodeURI(
-      `https://newsapi.org/v2/everything?q=${query}&apiKey=e4397fed6ebf4bae9b15c651e33df206&pageSize=15`
+      `https://gnews.io/api/v4/search?q=${query}&token=8d8ce8f49342b07f2488082a9c8d9f59&max=6`
     );
     setFullQuery(querySting);
     history.push("/search");
@@ -28,25 +28,26 @@ function App() {
       <Navbar handleSubmit={handleSubmit} handleChange={handleChange} />
       <Switch>
         <Route exact path="/">
-          <Hero query={Request.showcase} />
-          <HotSection query={Request.hot} />
-          <Trending query={Request.trending} />
-          <EditorsPick query={Request.EditorsPick} />
+          {console.log(RequsetG.showcase)}
+          <Hero query={RequsetG.showcase} />
+          <HotSection query={RequsetG.hot} />
+          <Trending query={RequsetG.trending} />
+          <EditorsPick query={RequsetG.EditorsPick} />
         </Route>
         <Route exact path="/science">
-          <CategoryQuery query={Request.categoryScience} />
+          <CategoryQuery query={RequsetG.categoryScience} />
         </Route>
         <Route exact path="/technology">
-          <CategoryQuery query={Request.categoryTechology} />
+          <CategoryQuery query={RequsetG.categoryTechology} />
         </Route>
         <Route exact path="/sports">
-          <CategoryQuery query={Request.categorySports} />
+          <CategoryQuery query={RequsetG.categorySports} />
         </Route>
         <Route exact path="/business">
-          <CategoryQuery query={Request.categoryBusiness} />
+          <CategoryQuery query={RequsetG.categoryBusiness} />
         </Route>
         <Route exact path="/entertainment">
-          <CategoryQuery query={Request.categoryEntertainment} />
+          <CategoryQuery query={RequsetG.categoryEntertainment} />
         </Route>
         <Route exact path="/search">
           <CategoryQuery query={fullQuery} />
